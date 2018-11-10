@@ -12,6 +12,7 @@ require('./markdown');
 require('./to-markdown');
 require('./ie10-viewport-bug-workaround');
 require('./offcanvas');
+require('./nav-offcanvas');
 // require('./Gmap');
 require('./jquery.mycart.min');
 require('./diner');

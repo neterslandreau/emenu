@@ -1,6 +1,7 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,6 +12,8 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
+		Blade::withoutDoubleEncoding();
+		
 		view()->composer('home', function($view) {
 			$items = \App\Item::get()->sortBy('order');
 			$types = \App\Type::get()->sortBy('order');

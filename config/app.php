@@ -192,7 +192,6 @@ return [
         Overtrue\LaravelShoppingCart\ServiceProvider::class,
         SimpleSoftwareIO\SMS\SMSServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
     ],
 
