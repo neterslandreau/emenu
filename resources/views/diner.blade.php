@@ -1,6 +1,7 @@
 @extends('layouts.diner-layout')
 
 @section('content')
+
 <div id="diner">
 	<div class="row row-offcanvas row-offcanvas-right">
 

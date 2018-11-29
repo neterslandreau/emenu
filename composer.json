@@ -5,29 +5,30 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
+        "php": ">=7.1.13",
         "ext-curl": "*",
         "authorizenet/authorizenet": "~1.9.6",
         "aws/aws-sdk-php": "^3.64",
-        "barryvdh/laravel-debugbar": "^2.3",
-        "cartalyst/stripe-laravel": "6.0.*",
+        "barryvdh/laravel-debugbar": "^3.2.0",
         "cviebrock/eloquent-sluggable": "^4.2",
         "intervention/image": "^2.4",
         "intervention/imagecache": "^2.3",
         "jenssegers/agent": "^2.6",
-        "laravel/framework": "5.4.*",
+        "laravel/framework": "5.7.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "overtrue/laravel-shopping-cart": "1.0.*",
         "simplesoftwareio/simple-sms": "3.1.*",
+        "fideloper/proxy": "~4.0",
         "stripe/stripe-php": "^6.15",
         "webpatser/laravel-uuid": "^2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7"
+        "phpunit/phpunit": "^7.0",
+        "filp/whoops": "~2.0"
     },
     "autoload": {
         "classmap": [
@@ -50,12 +51,14 @@
             "php artisan key:generate"
         ],
         "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize"
+            "Illuminate\\Foundation\\ComposerScripts::postInstall"
         ],
         "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize"
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
         ]
     },
     "config": {

@@ -25,6 +25,18 @@ Route::get('/contact', function () {
 Route::get('/mobile', function () {
 	return view('mobile');
 });
+Route::get('/sliding-sidebar', function() {
+	return view('sliding-sidebar');
+});
+Route::get('/ss2', function() {
+	return view('ss2');
+});
+Route::get('/ss1', function() {
+	return view('ss1');
+});
+Route::get('/ss5', function() {
+	return view('ss5');
+});
 Route::get('cart', 'CartController@index');
 Route::post('cart', 'CartController@store');
 Route::post('cart/update', 'CartController@update');

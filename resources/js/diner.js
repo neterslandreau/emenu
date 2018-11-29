@@ -132,6 +132,11 @@ $(function() {
 			// ]
 	});
 
+    $('#sidebarCollapse').on('click', function () {
+    	console.log('sidebarCollapse clicked.');
+        $('#sidebar').toggleClass('active');
+    });
+
 	if (!window.location.pathname.match(/home|items|types/)) {
 		Gmap.populateMap('5191 S State Road 7, Davie, FL 33314', 'Schooner or Later Bar & Grill');
 	}

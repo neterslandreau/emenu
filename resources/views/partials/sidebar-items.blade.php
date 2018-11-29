@@ -1,8 +1,8 @@
-<div class="list-group">
+<div class="list-group" id="app">
 
 	@foreach ($menuItem as $mi => $item)
 
-    <a href="#" class="list-group-item" data-toggle="modal" data-target="#{{ $item->slug }}">{{ $item->name }} <span class="pull-right">${{ $item->price }}</span></a>
+	<menu-item name="{{ $item->name }}" price="{{ $item->price }}" description="" data-toggle="modal" data-target="#{{ $item->slug }}"></menu-item>
 
     @include('partials.modal')
 

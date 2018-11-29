@@ -11,10 +11,12 @@ require('./marked.min.js');
 require('./markdown');
 require('./to-markdown');
 require('./ie10-viewport-bug-workaround');
-require('./offcanvas');
+// require('./offcanvas');
+// require('./nav-offcanvas');
 // require('./Gmap');
 require('./jquery.mycart.min');
 require('./diner');
+require('../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -25,7 +25,7 @@
 
   <body>
 
-    @include('navigation.header-nav')
+    @include('navigation.header-nav3')
 
     <div class="container-fluid">
     @if ($flash = session('message'))
@@ -46,7 +46,11 @@
 
     @endif
 
+    <div id="app">
+
     @yield('content')
+    
+    </div>
 
     @include('layouts.footer')
 
@@ -54,5 +58,7 @@
 
     <script async defer src='//maps.google.com/maps/api/js?key={{ env("GMAP_API_KEY") }}'></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/vc.js') }}"></script>
+
   </body>
 </html>

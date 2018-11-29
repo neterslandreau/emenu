@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top navbar-inverse">
+<nav class="navbar navbar-fixed-top navbar-inverse bg-light">
 
   <div class="container">
 
@@ -18,7 +18,7 @@
 
     </div>
 
-    <div id="navbar" class="collapse navbar-collapse">
+    <div id="navbar" class="collapse show navbar-collapse">
 
       <ul class="nav navbar-nav">
 
