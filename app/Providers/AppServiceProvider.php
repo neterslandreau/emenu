@@ -13,14 +13,16 @@ class AppServiceProvider extends ServiceProvider
 	public function boot()
 	{
 		Blade::withoutDoubleEncoding();
-		
+
 		view()->composer('home', function($view) {
 			$items = \App\Item::get()->sortBy('order');
 			$types = \App\Type::get()->sortBy('order');
 			$view->with(compact('items', 'types'));
 		});
 
-		view()->composer('diner', function($view) {
+		view()->composer(['ss2', 'diner', 'sliding-sidebar'], function($view) {
+			$image = \Image::canvas(800, 600, '#ff0000');
+
 			$featuredItems = \App\Item::featuredItems();
 			$types = \App\Type::get()->sortBy('order');
 
@@ -31,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
 
 			}
 
-			$view->with(compact('featuredItems', 'menuItems', 'types'));
+			$view->with(compact('image', 'featuredItems', 'menuItems', 'types'));
 		});
 
 	}

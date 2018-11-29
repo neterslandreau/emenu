@@ -15,11 +15,11 @@
 	])
 	)
 
-	<label for "notes">Select your choices</label> {{-- $item->type->slug --}} {{-- $item->slug --}}
+	<label>Select your choices:</label>
 
 	@endif
 
-	@if ($item->slug === 'daily-special-7-days-a-week-until-2-00-pm' || $item->slug === '2-2-2' || $item->slug === '4-x-2' || $item->type->slug === 'breakfast')
+	@if ($item->slug == 'daily-special-7-days-a-week-until-2-00-pm' || $item->slug == '2-2-2' || $item->slug == '4-x-2' || $item->type->slug == 'breakfast')
 	{{-- Breakfast Egg Platters --}}
 
 		@if ($item->slug == 'w-bacon-sausage-links-or-ham')
@@ -32,7 +32,7 @@
 
 			</div>
 
-		@elseif ($item->slug === '2-2-2')
+		@elseif ($item->slug == '2-2-2')
 
 			<div class="form-group">
 
@@ -45,20 +45,20 @@
 
 			<div class="form-group">
 
-				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_hashbrowns" name="sides" value="hashbrown">Hash Browns</label>
-				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_tomatoes" name="sides" value="homefries">Home Fries</label>
-				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_pickles" name="sides" value="grits">Grits</label>
+				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_hashbrowns" name="sides" value="hashbrown"> Hash Browns</label>
+				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_tomatoes" name="sides" value="homefries"> Home Fries</label>
+				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_pickles" name="sides" value="grits"> Grits</label>
 
 			</div>
 
 			<div class="form-group">
 
-				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_toast" name="bread" value="toast">Toast</label>
-				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_biscuit" name="bread" value="biscuit">Biscuit</label>
+				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_toast" name="bread" value="toast"> Toast</label>
+				<label class="radio-inline"><input type="radio" id="{{ $item->slug }}_extra_biscuit" name="bread" value="biscuit"> Biscuit</label>
 
 			</div>
 
-	@elseif ($item->slug === 'bagel-w-cream-cheese' || $item->slug === 'bagel')
+	@elseif ($item->slug == 'bagel-w-cream-cheese' || $item->slug == 'bagel')
 
 		<div class="form-group">
 
@@ -69,7 +69,7 @@
 
 		</div>
 
-	@elseif ($item->type->slug === 'smoothies') {{-- Breakfast Omlettes --}}
+	@elseif ($item->type->slug == 'smoothies') {{-- Breakfast Omlettes --}}
 
 			<div class="form-group"><span style="padding:right: 5px;"><b>Sides:</b></span>
 
@@ -86,7 +86,7 @@
 
 			</div>
 
-			@if ($item->slug === 'ham-bacon-or-sausage-cheese')
+			@if ($item->slug == 'ham-bacon-or-sausage-cheese')
 
 			<div class="form-group"><span style="padding:right: 5px;"><b>Bread:</b></span>
 

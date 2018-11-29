@@ -6,19 +6,19 @@ Vue.component('menu-item', {
 
 	<a href="#">
 
-		<div class="card text-white bg-dark mb-3">
+		<div class="card text-dark bg-light mb-3">
 
 			<div class="card-body">
 
-				<div class="row">
+				<div class="row" style="border: 1px #fff;">
 
-					<div class="col-sm-9">
+					<div class="col-sm-8">
 
-						<span style="font-size: .70rem; font-weight: bold;">{{ name }}</span>
+						<span style="font-size: .8rem; font-weight: bold;">{{ name }}</span>
 
 					</div>
 
-					<div class="col-sm-3 text-right">
+					<div class="col-sm-4 text-right" style="font-size: .7rem;font-weight: bold;">
 
 						<span>{{ price }}</span>
 
@@ -46,5 +46,5 @@ Vue.component('menu-item', {
 });
 
 app = new Vue({
-    el: '#app',
+    el: '#menuItems',
 });

@@ -13,7 +13,7 @@
 	]) )
 
 <div class="form-group">
-	<label for="notes">How would like your order cooked?</label> {{-- $item->type->slug --}} {{-- $item->slug --}}
+	<label for="{{ $item->slug }}_notes">How would like your order cooked?</label> {{-- $item->type->slug --}} {{-- $item->slug --}}
 
 	<input id="{{ $item->slug }}_notes" name="{{ $item->slug }}_notes">
 
