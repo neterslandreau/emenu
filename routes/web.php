@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('diner');
+    return view('ss2');
 })->name('diner');
 
 Route::get('/about', function () {
