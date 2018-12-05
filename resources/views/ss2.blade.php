@@ -25,17 +25,23 @@
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar" class="active">
-            <div class="sidebar-header bg-custom">
-                <h3 class="text-center">Menu</h3>
+            <div class="sidebar-header">
+                <h3 class="text-center text-white"><b>Menu</b></h3>
             </div>
 
             <ul class="components" id="menuItems">
                 
             @foreach ($menuItems as $mi => $menuItem)
 
-                <h6 class="text-center"><b>{{ $menuItems[$mi]->typeName }}</b></h6>
+                <!-- <h6 class="text-center text-white bg-dark"><b>{{ $menuItems[$mi]->typeName }}</b></h6> -->
 
-                @include('partials.sidebar-items')
+                <h6><a class="text-center text-white bg-dark" data-toggle="collapse" href="#{{ $menuItems[$mi]->typeSlug }}" role="button" aria-expanded="false" aria-controls="{{ $menuItems[$mi]->typeSlug }}" style="margin-left: 1rem; padding: 2px;">{{ $menuItems[$mi]->typeName }}</a></h6>
+
+                <div class="collapse" id="{{ $menuItems[$mi]->typeSlug }}">
+
+                    @include('partials.sidebar-items')
+
+                </div>
 
             @endforeach
 
@@ -49,11 +55,11 @@
 
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-success">
 
                         <i class="fas fa-align-left"></i>
 
-                        <span>Toggle Sidebar</span>
+                        <span><em>Toggle Menu</em></span>
 
                     </button>
 
@@ -66,13 +72,42 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
 
-                            <li class="nav-item"><a href="#" class="navlink">huh</a></li>
-                            <li class="nav-item"><a href="#" class="navlink">huh</a></li>
-                            <li class="nav-item"><a href="#" class="navlink">huh</a></li>
-                            <li class="nav-item"><a href="#" class="navlink">huh</a></li>
+                            <li class="nav-item">
+                                <a title="Home" href="/">
+                                    <span class="glyphicon glyphicon-home col-sm-1"></span>
+                                    <span class="col-sm-2">Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" title="About" data-toggle="modal" data-target="#about">
+                                    <span class="glyphicon glyphicon-info-sign col-sm-1"></span>
+                                    <span class="col-sm-2">About</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" title="Contact" data-toggle="modal" data-target="#contact">
+                                    <span class="glyphicon glyphicon-phone col-sm-1"></span>
+                                    <span class="col-sm-2">Contact</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" title="Shopping Cart" data-toggle="modal" data-target="#cart">
+                                    <span class="glyphicon glyphicon-shopping-cart col-sm-1">
+                                        <span class="badge badge-notify"></span>
+                                    </span>
+                                    <span class="col-sm-2">Cart</span>
+                                </a>
+                            </li>
                             
                         </ul>
                     </div>
+
+                    @include('partials.about')
+
+                    @include('partials.cart')
+
+                    @include('partials.contact')
+
                 </div>
             </nav>
 

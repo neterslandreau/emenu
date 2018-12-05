@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
 			foreach ($types as $t => $type) {
 				$menuItems[$t] = \App\Item::getItems($type->slug)->sortBy('order');
 				$menuItems[$t]->typeName = $type->name;
+				$menuItems[$t]->typeSlug = $type->slug;
 
 			}
 
