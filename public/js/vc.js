@@ -12,9 +12,9 @@ Vue.component('menu-item', {
 
 				<div class="row" style="border: 1px #fff;">
 
-					<div class="col-sm-8">
+					<div class="col-sm-8" style="font-size: .7rem; font-weight: bold;">
 
-						<span style="font-size: .8rem; font-weight: bold;">{{ name }}</span>
+						<span>{{ name }}</span>
 
 					</div>
 

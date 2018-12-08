@@ -74,25 +74,25 @@
 
                             <li class="nav-item">
                                 <a title="Home" href="/">
-                                    <span class="glyphicon glyphicon-home col-sm-1"></span>
+                                    <i class="fas fa-home col-sm-1"></i>
                                     <span class="col-sm-2">Home</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" title="About" data-toggle="modal" data-target="#about">
-                                    <span class="glyphicon glyphicon-info-sign col-sm-1"></span>
+                                    <i class="fas fa-info col-sm-1"></i>
                                     <span class="col-sm-2">About</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" title="Contact" data-toggle="modal" data-target="#contact">
-                                    <span class="glyphicon glyphicon-phone col-sm-1"></span>
+                                    <i class="fas fa-phone col-sm-1"></i>
                                     <span class="col-sm-2">Contact</span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" title="Shopping Cart" data-toggle="modal" data-target="#cart">
-                                    <span class="glyphicon glyphicon-shopping-cart col-sm-1">
+                                    <i class="fas fa-shopping-cart col-sm-1"></i>
                                         <span class="badge badge-notify"></span>
                                     </span>
                                     <span class="col-sm-2">Cart</span>
