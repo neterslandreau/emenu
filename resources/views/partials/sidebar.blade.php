@@ -2,7 +2,7 @@
 
     @foreach ($menuItems as $mi => $menuItem)
 
-        <h6><b>{{ $menuItems[$mi]->typeName }}</b></h6>
+        <h6 class="col-md-12"><b>{{ $menuItems[$mi]->typeName }}</b></h6>
 
         @include('partials.sidebar-items')
 
