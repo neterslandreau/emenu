@@ -33,21 +33,10 @@
                 
             @foreach ($menuItems as $mi => $menuItem)
 
-                @php
-
-                    $name = str_pad($menuItems[$mi]->typeSlug, 10);
-
-                @endphp
-
-                <!-- <h6 class="text-center text-white bg-dark"><b>{{ $menuItems[$mi]->typeName }}</b></h6> -->
-
-                    <div class="card text-center">
-                        <div class="card-body">
+                    <div class="card">
                             <a href="#{{ $menuItems[$mi]->typeSlug }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="{{ $menuItems[$mi]->typeSlug }}" class="btn btn-primary">{{ $menuItems[$mi]->typeName }}</a>
-                        </div>
                     </div>
-<!--                 <h6><a class="text-center text-white bg-dark col-md-12" data-toggle="collapse" href="#{{ $name }}" role="button" aria-expanded="false" aria-controls="{{ $menuItems[$mi]->typeSlug }}" style="margin-left: 1rem; padding: 2px;">{{ $menuItems[$mi]->typeName }}</a></h6>
- -->
+
                 <div class="collapse" id="{{ $menuItems[$mi]->typeSlug }}">
 
                     @include('partials.sidebar-items')
