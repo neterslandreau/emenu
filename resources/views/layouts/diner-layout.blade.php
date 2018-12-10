@@ -25,7 +25,7 @@
 
   <body>
 
-    @include('navigation.header-nav3')
+    @include('navigation.header-nav2')
 
     <div class="container-fluid">
     @if ($flash = session('message'))
