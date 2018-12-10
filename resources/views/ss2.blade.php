@@ -34,7 +34,7 @@
             @foreach ($menuItems as $mi => $menuItem)
 
                     <div class="card">
-                            <a href="#{{ $menuItems[$mi]->typeSlug }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="{{ $menuItems[$mi]->typeSlug }}" class="btn btn-primary">{{ $menuItems[$mi]->typeName }}</a>
+                            <a href="#{{ $menuItems[$mi]->typeSlug }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="{{ $menuItems[$mi]->typeSlug }}" class="btn btn-success">{{ $menuItems[$mi]->typeName }}</a>
                     </div>
 
                 <div class="collapse" id="{{ $menuItems[$mi]->typeSlug }}">
