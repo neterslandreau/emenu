@@ -26,7 +26,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <a id="sidebarCollapseM" href=#"><h3 class="text-center text-white"><b>Menu</b></h3></a>
+                <a id="sidebarCollapseM" role="button"><h3 class="text-center text-white"><b>Menu</b></h3></a>
             </div>
 
             <ul class="components panel-group" id="menuItems">
