@@ -1,4 +1,4 @@
-<div class="list-group" id="app">
+<div class="list-group">
 
 	@foreach ($menuItem as $mi => $item)
 

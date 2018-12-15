@@ -132,7 +132,7 @@ $(function() {
 			// ]
 	});
 
-    $('#sidebarCollapse').on('click', function () {
+    $('[id^="sidebarCollapse"]').on('click', function () {
     	console.log('sidebarCollapse clicked.');
         $('#sidebar').toggleClass('active');
     });
