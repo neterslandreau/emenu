@@ -91,7 +91,7 @@ footer {
 #sidebar ul li.active > a,
 a[aria-expanded="true"] {
   color: #fff;
-  background: #6d7fcc;
+  background: #28a745;
 }
 
 a[data-toggle="collapse"] {
