@@ -29,19 +29,31 @@
                 <a id="sidebarCollapseM" role="button"><h3 class="text-center text-white"><b>Menu</b></h3></a>
             </div>
 
-            <ul class="components panel-group" id="menuItems">
+            <ul class="components panel-group">
+
+            <div id="menuItems">
+
+            @php
+
+                $x = 0;
+
+            @endphp
 
             @foreach ($menuItems as $mi => $menuItem)
 
                 <div class="card">
 
-                        <a href="#{{ $menuItems[$mi]->typeSlug }}" data-parent="#menuItems" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="{{ $menuItems[$mi]->typeSlug }}" class="btn btn-success">{{ $menuItems[$mi]->typeName }}</a>
+                    <div id="heading{{ $x }}">
+
+                        <a href="#{{ $menuItems[$mi]->typeSlug }}" data-parent="#menuItems" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="{{ $menuItems[$mi]->typeSlug }}" class="btn btn-success collapsed" style="width: 100%;">{{ $menuItems[$mi]->typeName }}</a>
+
+                    </div>
 
                 </div>
 
                 <div class="panel">
 
-                    <div class="collapse" id="{{ $menuItems[$mi]->typeSlug }}">
+                    <div id="{{ $menuItems[$mi]->typeSlug }}" class="item collapse" aria-labelledby="heading{{ $x }}" data-parent="#menuItems">
 
                         @include('partials.sidebar-items')
 
@@ -49,7 +61,15 @@
 
                 </div>
 
+            @php
+
+                $x++;
+
+            @endphp
+
             @endforeach
+
+            </div>
 
             </ul>
         </nav>
