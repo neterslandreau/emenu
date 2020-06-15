@@ -34,7 +34,7 @@
 				</div>
 
 				<div class="form-group">
-					<label for="{{ $item->description }}">{!! $item->description !!}</label>
+					<label for="{{ $item->description }}" style="color: #000;">{!! $item->description !!}</label>
 				</div>
 
 				<div class="form-group">
