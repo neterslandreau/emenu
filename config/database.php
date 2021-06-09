@@ -60,6 +60,7 @@ return [
 	            'NO_ENGINE_SUBSTITUTION',
 	            'NO_AUTO_CREATE_USER',
             ],
+	        
         ],
 
         'pgsql' => [
